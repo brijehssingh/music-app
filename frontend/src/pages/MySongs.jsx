@@ -7,8 +7,8 @@ export default function MySongs(){
 const { mySongs, getSongs, deleteSong } = useSongStore()
 
 useEffect(()=>{
-getSongs()
-},[])
+  getSongs()
+},[getSongs])
 
 return(
 
@@ -48,7 +48,7 @@ Upload your first song to see it here
 
 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
 
-{mySongs.map(song=>(
+{mySongs.map((song)=>(
 <SongCard
 key={song._id}
 song={song}
