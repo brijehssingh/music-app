@@ -49,14 +49,7 @@ export default function Player(){
 
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-black via-gray-900 to-black text-white">
 
-      {/* Back Button */}
-
-      <button
-      onClick={()=>navigate(-1)}
-      className="absolute top-6 left-6 btn btn-ghost"
-      >
-      ⬅ Back
-      </button>
+      
 
 
       {/* Player Card */}
