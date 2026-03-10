@@ -93,7 +93,7 @@ export default function Player(){
 
       {/* Audio */}
 
-      <audio ref={audioRef} src={song.song}/>
+      <audio ref={audioRef} src={song.url}/>
 
 
       {/* Controls */}
