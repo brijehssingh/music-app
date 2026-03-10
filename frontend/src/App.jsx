@@ -9,6 +9,8 @@ import Navbar from "./components/Navbar";
 import MusicPlayer from "./components/MusicPlayer";
 import Album from "./pages/Album";
 import Logout from "./pages/Logout";
+import Player from "./pages/Player";   // ADD THIS
+
 function App() {
 
 return (
@@ -32,6 +34,10 @@ return (
 <Route path="/upload" element={<Upload/>}/>
 <Route path="/mysongs" element={<MySongs/>}/>
 <Route path="/logout" element={<Logout/>}/>
+
+{/* ADD THIS ROUTE */}
+<Route path="/player" element={<Player/>}/>
+
 </Routes>
 
 </div>
