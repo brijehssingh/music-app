@@ -35,7 +35,9 @@ export async function signup(req, res) {
     );
 
     res.cookie("token", token, {
-      httpOnly: true
+      httpOnly: true,
+      secure: true,
+      sameSite: "None"
     });
 
     res.status(201).json({
@@ -52,8 +54,6 @@ export async function signup(req, res) {
   }
 
 }
-
-
 export async function login(req,res){
 
 try {
@@ -77,7 +77,11 @@ const token = jwt.sign(
 process.env.JWT_SECRET
 );
 
-res.cookie("token", token , { httpOnly:true });
+res.cookie("token", token , {
+httpOnly:true,
+secure:true,
+sameSite:"None"
+});
 
 res.status(200).json({
 message:"Login successful",
@@ -93,7 +97,6 @@ message:"server error"
 }
 
 }
-
 
 export async function musicUpload(req,res){
 
